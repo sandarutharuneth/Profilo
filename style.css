@@ -1,0 +1,293 @@
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans';
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background: linear-gradient(28deg, #9fa2ba 30%, #9094af 30%, #9094af 55%, #9fa2ba 55%, #9fa2ba 80%, #9094af 80%, #9094af 100%);
+}
+
+.container {
+  width: 100%;
+  min-width: 184px;
+  height: 100%;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 80%;
+  padding-bottom: 110%;
+  border-radius: 5%;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0.2em 1em 1.5em -0.5em rgba(0, 0, 0, 0.5);
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5% 5% 0 0;
+  background-color: #6a7388;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 35%);
+          clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 35%);
+}
+.header-background .content {
+  padding: 1.5rem;
+  font-size: 1rem;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.report {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 3rem;
+}
+.report .header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+}
+.report .header .picture {
+  margin: auto 1.5rem auto 0;
+  width: 35%;
+  padding-bottom: 35%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  background-image: url(http://stuffpoint.com/cats/image/347687-cats-cute-small-kitten.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0em 1.2em 1.2em -0.5em rgba(0, 0, 0, 0.5);
+}
+.report .header .details {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.report .header .details .name {
+  font-size: 3rem;
+  color: #fff;
+  padding-bottom: 0.2em;
+}
+.report .header .details .info {
+  font-size: 1.5rem;
+  color: #e3cfdf;
+  padding-bottom: 0.3em;
+}
+.report .header .details .id {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: #9fa2ba;
+}
+.report .header .details .id span {
+  text-transform: uppercase;
+}
+.report .body {
+  width: 100%;
+  height: 75%;
+  padding-top: 20%;
+}
+.report .body .main-list {
+  width: 100%;
+  height: 100%;
+}
+.report .body .main-list > li {
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding-bottom: 1.7em;
+  padding-left: 2.5em;
+  width: 100%;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+}
+.report .body .main-list > li:before {
+  font-size: 1rem;
+  content: "";
+  display: block;
+  width: 4%;
+  padding-bottom: 4%;
+  background-color: #e3cfdf;
+  border-radius: 100%;
+  border: 0.3em solid #e3cfdf;
+  position: absolute;
+  left: 0;
+}
+.report .body .main-list > li span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-left: 1em;
+  color: #9fa2ba;
+  display: inline-block;
+}
+.report .body .main-list > li.active:before {
+  background-color: transparent;
+}
+.report .body .main-list > li.active span {
+  background-color: #e3cfdf;
+  padding: 0.4em 0.8em;
+  border-radius: 2.5em;
+  color: black;
+  box-shadow: 0em 0.6em 1em -0.5em rgba(0, 0, 0, 0.5);
+}
+.report .body .main-list > li ul li {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-top: 0.8em;
+  color: #9fa2ba;
+}
+.report .body .main-list > li ul li:before {
+  font-size: 1rem;
+  margin-right: 0.5em;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.5em solid #e3cfdf;
+  border-top: 0.4em solid transparent;
+}
+
+.action {
+  width: 10%;
+  padding-bottom: 10%;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 1em 2em 0;
+  box-shadow: 0em 1.2em 1.2em -0.5em rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+}
+.action.is-open .button {
+  transform: rotate(135deg);
+}
+.action.is-open .first {
+  transform: translate(0, -240%);
+  opacity: 1;
+}
+.action.is-open .second {
+  transform: translate(-110%, -190%);
+  opacity: 1;
+}
+.action.is-open .third {
+  transform: translate(-195%, -110%);
+  opacity: 1;
+}
+.action.is-open .fourth {
+  transform: translate(-240%, 0%);
+  opacity: 1;
+}
+.action ul {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.action ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.action ul li:hover {
+  color: #e3cfdf;
+}
+.action ul li.first, .action ul li.second, .action ul li.third, .action ul li.fourth {
+  background-color: #e3cfdf;
+  opacity: 0;
+  box-shadow: 0px 0.6em 0.6em -0.25em rgba(0, 0, 0, 0.5);
+}
+.action ul li.first:hover, .action ul li.second:hover, .action ul li.third:hover, .action ul li.fourth:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.action ul li.first {
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+.action ul li.second {
+  transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
+}
+.action ul li.third {
+  transition: transform 700ms ease-in-out, opacity 700ms ease-in-out;
+}
+.action ul li.fourth {
+  transition: transform 800ms ease-in-out, opacity 800ms ease-in-out;
+}
+
+.button {
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding-bottom: 100%;
+  z-index: 2;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #e3cfdf;
+  transition: transform 700ms ease;
+}
+.button:hover {
+  background-color: #d0afca;
+}
+.button:before, .button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6%;
+  height: 55%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+}
+.button:before {
+  transform: translate(-50%, -50%);
+}
+.button:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.credit {
+  font-size: 1.2rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1em;
+}
+.credit a {
+  text-decoration: none;
+  color: white;
+}
