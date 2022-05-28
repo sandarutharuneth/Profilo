@@ -14362,7 +14362,7 @@ btn-check:focus + .btn-primary,
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
