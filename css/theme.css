@@ -14359,3 +14359,22 @@ btn-check:focus + .btn-primary,
   font-size: 15px;
   margin:auto;
 }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border: 3px solid #ffffff; 
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background:linear-gradient(
+    135deg,
+    #f3d8ff,
+    #fefcff
+  ); 
+  border-radius: 3px;
+}
